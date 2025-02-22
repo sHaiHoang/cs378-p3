@@ -10,7 +10,7 @@ const MenuItem = ({ id, title, description, price, imageName, quantity, updateQu
         <div className="menu-item d-flex align-items-center">
             {/* Image Column */}
             <div className="col-4 d-flex align-items-center justify-content-center">
-                <img src={`./images/${imageName}`} alt={title} className="img-fluid" />
+                <img src={`${process.env.PUBLIC_URL}/images/${imageName}`} alt={title} className="img-fluid" />
             </div>
 
             {/* Food Detaisl */}

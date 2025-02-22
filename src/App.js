@@ -33,6 +33,27 @@ const menuItems = [
     description: 'Spicy curry with yellow rice, carrots, and potatoes.',
     imageName: 'menu-item-4.jpg',
     price: 12.75,
+  },
+  {
+    id: 5,
+    title: 'Happy Snorlax Loco Moco',
+    description: 'Hawaiian dish with hamburger patty, rice, a fried egg, and rich brown gravy.',
+    imageName: 'menu-item-5.jpg',
+    price: 11.50,
+  },
+  {
+    id: 6,
+    title: 'Sylveon Custard Slice',
+    description: 'A delicate layered custard pastry topped with strawberries and vanilla.',
+    imageName: 'menu-item-6.jpg',
+    price: 6.75,
+  },
+  {
+    id: 7,
+    title: 'Dugtrio Sandwich Trio',
+    description: 'Three mini sandwiches filled with turkey, ham, tomatoes, and cheese.',
+    imageName: 'menu-item-7.jpg',
+    price: 8.50,
   }
 ];
 
@@ -87,7 +108,7 @@ function App() {
       <div className="row">
         <div className="col text-center">
           <div className="d-flex align-items-center justify-content-center title-container">
-            <img src="./images/logo.png" alt="Eevee Icon Logo" className="title-image" />
+            <img src={`${process.env.PUBLIC_URL}/images/logo.png`} alt="Eevee Icon Logo" className="title-image" />
             <h1 className="quicksand-in-title">The Eevee Café</h1>
           </div>
         </div>
