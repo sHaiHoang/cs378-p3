@@ -1,19 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // This is a functional component that represents a single menu item. It currently takes in the title and displays it in an h2 element.
 // Modify the component to take in all the other properties of a menu item you need and display them in the component.
 // Use bootstrap to style the elements so that it looks like the mockup in the assignment.
 // Hint: You can use the image name to get the image from the images folder.
-const MenuItem = ({ title, description, price, imageName }) => {
-    // Set to track item quantity
-    const [quantity, setQuantity] = useState(0);
-
-    // Func to update quantity
-    const updateQuantity = (change) => {
-        setQuantity(prevQuantity => Math.max(0, prevQuantity + change));
-    }
-
+const MenuItem = ({ id, title, description, price, imageName, quantity, updateQuantity }) => {
     return (
         <div className="menu-item d-flex align-items-center">
             {/* Image Column */}
@@ -42,13 +34,13 @@ const MenuItem = ({ title, description, price, imageName }) => {
                     <div className="col-4 text-end">
                         <button 
                             className="btn btn-danger btn-sm" 
-                            onClick={() => updateQuantity(-1)}
+                            onClick={() => updateQuantity(id, price, -1)}
                             disabled={quantity === 0}
                         >-</button>
                         <span className="item-count mx-2">{quantity}</span>
                         <button
                             className="btn btn-success btn-sm"
-                            onClick={() => updateQuantity(1)}
+                            onClick={() => updateQuantity(id, price, 1)}
                         >+</button>
                     </div>
                 </div>

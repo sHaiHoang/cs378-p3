@@ -57,8 +57,11 @@ html, body, #root {
 }
 
 .menu {
+  flex: 1;
+  overflow-y: auto;
   margin: 20px;
   margin-bottom: 0;
+  padding-bottom: 80px;
 }
 
 .menu-item {
@@ -147,4 +150,41 @@ html, body, #root {
   background-color: #ccc;
   border-color: #ccc;
   cursor: not-allowed;
+}
+
+.subtotal-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #8B4513;
+  color: #FFE4C4;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.subtotal-text {
+  margin: 0;
+  padding-left: 23px;
+}
+
+.subtotal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.order-btn {
+  background-color: #FFD700;
+  color: #8B4513;
+  border: none;
+}
+
+.clear-btn {
+  background-color: #D2B48C;
+  color: #8B4513;
+  border: none;
 }
